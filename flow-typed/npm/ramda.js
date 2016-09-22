@@ -28,4 +28,6 @@ declare module ramda {
 
   // logic
   declare var allPass: UnaryFn<Array<(x: any) => boolean>, boolean>;
+  declare function and<T1, T2>(t1: T1, ...rest: Array<void>): (t2: T2) => T1 | T2;
+  declare function and<T1, T2>(t1: T1, t2: T2, ...rest: Array<void>): T1 | T2
 }

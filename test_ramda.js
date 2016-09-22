@@ -43,3 +43,13 @@ const isQueenOfSpades = R.allPass([isQueen, isSpade]);
 // $FlowFixMe
 const isQueen2 = (card: Card) => card.rank;
 const isQueenOfSpades2 = R.allPass([isQueen2, isSpade]);
+
+R.and(true, false) == true;
+R.and(true)(false) == true;
+R.and({ foo: 1 }, { foo: 'a', bar: 2 }).foo;
+R.and({ bar: 1 })({ foo: 'a', bar: 2 }).bar;
+R.and('asda')([12, 3, 4]).length == 0;
+
+// $FlowFixMe
+R.and(true, false) == 1;
+R.and({ foo: 1 }, { foo: 'a', bar: 2 }).bar;
